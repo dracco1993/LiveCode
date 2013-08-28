@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Node Test</title>
+	<script src="./js/jQuery.min.js"></script>
+	<script src="./js/socket.io.min.js"></script>
+	<script src="./js/highlight.pack.js"></script>
+	<script src="./js/jquery.caret.min.js"></script>
+	<script src="./js/jquery.lightbox_me.js"></script>
+	<script src="./js/index.js"></script>
+	<link rel="stylesheet" href="styles/monokai.css">
+	<link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+<div id="sessionName">Session Name: ' '</div>
+<div id="roomCode">Room Code: ' '</div>
+<pre id="output" class="language-html">
+<code>
+	<div id="textArea"></div>
+</code>
+</pre>
+
+<div id="lightbox" class = "section shadow">
+	<h2>Find your position, then fill out the information:</h2>
+	<ul>
+		<div id="presenter"><li><strong>Presenter</strong> - Write code for others to view</li></div>
+		<ul style="margin-top: 10px;">
+			<li>Please enter the following:</li>
+			<li>
+				<form>
+					<input id="txtDisName" type="text" name="txtDisName" enter="startRoom()" placeholder="Display Name">
+					<br/>
+		        	<input id="txtSesName" type="text" name="txtSesName" enter="startRoom()" placeholder="Session name">
+		        	<button id="startBtn" type="button" for="txtSesName" onClick="startRoom()">Start</button>
+		    	</form>
+    		</li>
+    	</ul>
+		<br/>
+		<div id="participant"><li><strong>Participant</strong> - View code written live by your presenter.</li></div>
+		<ul style="margin-top: 10px;">
+			<li>Please enter the code given to you by the presenter:</li>
+			<li>
+				<form>
+					<input id="txtParName" type="text" name="txtParName" enter="startRoom()" placeholder="Display Name">
+					<br/>
+		        	<input id="txtRoom" type="text" name="txtRoom" enter="joinRoom()" placeholder="Room Code">
+		        	<button id="joinBtn" type="button" for="txtRoom" onClick="joinRoom()">Join</button>
+		    	</form>
+    		</li>
+    	</ul>
+	</ul>
+</div>
+
+</body>
+</html>

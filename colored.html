@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Node Test</title>
+	<script src="/js/jQuery.min.js"></script>
+	<script src="/js/socket.io.min.js"></script>
+	<script src="/js/jquery.caret.min.js"></script>
+	<link rel="stylesheet" href="styles/monokai.css">
+	<script src="highlight.pack.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			var cursorPos = 10;
+
+			$('div#test').each(function(i, e) {hljs.highlightBlock(e)});
+	  		$('div#test').bind('keyup',function(){
+	  			$("span").each(function( index ) {
+			        var temp = $(this).contents();
+			        $(this).replaceWith(temp);
+			    });
+
+			    $('div#test').each(function(i, e) {hljs.highlightBlock(e)});
+
+	  			//console.log("--" + getCaretPosition(this));
+			    //$('div#test').setContentEditableSelection(cursorPos);
+			});
+		});
+	</script>
+</head>
+<body>
+<pre id="output" class="language-html">
+<code>
+&lt;!DOCTYPE html&gt;
+&lt;title&gt;Title&lt;/title&gt;
+
+&lt;style&gt;body {width: 500px;}&lt;/style&gt;
+
+<div id="test" class="sensor" contenteditable>
+&lt;script type="application/javascript"&gt;
+  function $init() {return true;}
+&lt;/script&gt;
+</div>
+
+&lt;body&gt;
+  &lt;p checked class="title" id='title'&gt;Title&lt;/p&gt;
+  &lt;!-- here goes the rest of the page --&gt;
+&lt;/body&gt;
+</code>
+</pre>
+</body>
+</html>

@@ -1,0 +1,59 @@
+h1 {
+    text-align: center;
+}
+
+h2 {
+    text-align: left;
+    border-bottom: 5px double black;
+}
+
+ul{
+    list-style-type: none;
+}
+
+#txtRoom, #txtSesName, #txtDisName, #txtParName{
+    border: solid 1px #CCC;
+    height: 21px;
+    width: 250px;
+    font-size: 15px;
+    color: #000;
+    padding-left: 5px;
+    vertical-align: bottom
+}
+
+#joinBtn, #startBtn{
+    border: solid 1px #CCC;
+    background-color: #111111;
+    height: 25px;
+    width: 115px;
+    color: white;
+}
+
+.section {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2em;
+    margin-top: 2em;
+}
+
+.smallSection {
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2em;
+    margin-top: 2em;
+}
+
+.shadow {
+    box-shadow: 10px 10px 10px #333333;
+    -moz-box-shadow: 10px 10px 10px #333333;
+    -webkit-box-shadow: 10px 10px 10px #333333;
+    padding: 1em;
+    border: 1px solid black; 
+    -moz-border-radius: 5px;
+    -o-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    background-color: #EEEEEE;
+}

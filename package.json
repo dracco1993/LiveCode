@@ -1,0 +1,14 @@
+{
+  "name": "LiveCode",
+  "subdomain": "com-dracco1993",
+  "scripts": {
+    "start": "Main.js"
+  },
+  "version": "1.0.0-2",
+  "engines": {
+    "node": "0.10.x"
+  },
+  "dependencies": {
+    "socket.io": "0.9.x"
+  }
+}
